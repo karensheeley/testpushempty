@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET Build Only
+name: .NET Build With Docker
 
 on:
   push:
@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    #runs-on: ubuntu-latest
-    runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [windows-latest]
+    runs-on: windows-latest
+    #runs-on: ${{matrix.os}}
+    #strategy:
+      #matrix:
+        #os: [windows-latest]
 
     steps:
     - uses: actions/checkout@v4
