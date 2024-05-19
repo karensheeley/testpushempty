@@ -30,3 +30,14 @@ jobs:
       run: dotnet build --no-restore
   #  - name: Test
   #    run: dotnet test --no-build --verbosity normal
+
+   # - name: Build & Push Docker image
+   #   uses: mr-smithers-excellent/docker-build-push@v6
+   #   with:
+   #     image: repo/image  (update)
+   #     tags: v1, latest
+   #     registry: registry-url.io  (update)
+   #     dockerfile: Dockerfile.ci  (update)
+   #     username: ${{ secrets.DOCKER_USERNAME }}  (stored in github)
+   #     password: ${{ secrets.DOCKER_PASSWORD }}  (settings.secrets in github)
+ 
